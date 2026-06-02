@@ -10,18 +10,33 @@ spec:
     email: yicai@redhat.com
   children: []
   members: [ciiay, rhdh-yi]
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: admins
+  description: Administrator group
+spec:
+  type: team
+  profile:
+    displayName: Admins
+  children: []
+  members: [ciiay]
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: ciiay
-  # title: test-ciiay
 spec:
   profile:
-    # Intentional no displayName for testing
     displayName: Yi Cai
     email: yicai@redhat.com
-  memberOf: [rhdh-ui-test]
+  memberOf:
+    - rhdh-ui-test
+    - admins
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -29,6 +44,6 @@ metadata:
   name: rhdh-yi
 spec:
   profile:
-    # Intentional no displayName for testing
     email: rhdh.yi.test@gmail.com
-  memberOf: [rhdh-ui-test]
+  memberOf:
+    - rhdh-ui-test
