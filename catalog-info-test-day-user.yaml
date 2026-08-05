@@ -7,7 +7,7 @@ spec:
   type: team
   profile:
     displayName: RHDH UI test day
-    email: test1@123
+    email: test1@example.com
   children: []
   members: [test1, test2]
 
@@ -32,7 +32,7 @@ metadata:
 spec:
   profile:
     displayName: Test One
-    email: test1@123
+    email: test1@example.com
   memberOf:
     - test-day
     - admins
@@ -41,7 +41,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: test2
+  name: test2@example.com
 spec:
   profile:
     email: test2@123
